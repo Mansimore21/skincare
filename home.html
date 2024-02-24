@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style1.css">
+
+</head>
+<body style="background-color:white;">
+
+
+<div class="navbar">
+  <a href="#home">Home</a>
+  
+  <div class="dropdown">
+    <button class="dropbtn">Skincare
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Skin type </a>
+      <a href="#">Skin Tone</a>
+      <a href="#">Routine</a>
+      
+  </div>
+</div>
+  <a href="#news">Hair Care</a>
+  <a href="#news">Login</a>
+<div class="logo"><img src="2.png" alt="Flowers in Chania" width="70" height="70"></div>
+    </div>
+</div>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="skin1.png" style="width:100%">
+  <div class="text">Do not hesitate to invest in your skin, it is going to talk for you for a very long time.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="skin2.png" style="width:100%">
+  <div class="text">Stop googling your symptoms, all you need is a skincare.</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="skin3.png" style="width:100%">
+  <div class="text">Cleanse, wash, tone, hydrate, moisturize and protect-can skincare get any easier?</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<article class="w3-container"> 
+  <h2>Paris</h2>
+  <p>You’ve likely heard many beauty and health influencers and experts tout their best skin care tips, but their recommendations might leave you wondering, “why is skincare so important, really?”.</p>
+  <p>Skin care plays an important role in your overall health and appearance. After all, your skin is the largest organ of your body.
+ Skin care primarily focuses on the delicate areas on your face, neck, and chest, with regimens focused on cleansing, moisturizing, and treating specific conditions. </p>
+  <hr>
+</article>
+</body>
+</html>
